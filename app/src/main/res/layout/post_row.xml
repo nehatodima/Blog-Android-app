@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:visibility="visible"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height = "wrap_content">
+
+
+
+        <ImageView
+            android:id="@+id/postimagelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            android:src="@color/grey"
+            android:contentDescription="jj"/>
+
+        <TextView
+            android:id="@+id/posttitlelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="title"
+            android:visibility="visible"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/postdesclist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="description"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/posttimelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="timestamp"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
