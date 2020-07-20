@@ -43,6 +43,7 @@ public class AddPost extends AppCompatActivity {
      private Uri iuri;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -53,6 +54,7 @@ public class AddPost extends AppCompatActivity {
         title = (EditText) findViewById(R.id.editText3);
         desc = (EditText) findViewById(R.id.editText4);
         im = (ImageButton) findViewById(R.id.imageButton);
+
 
         progress = new ProgressDialog(this);
 
@@ -74,7 +76,7 @@ public class AddPost extends AppCompatActivity {
 
 
                 if (!TextUtils.isEmpty(titlestring) && !TextUtils.isEmpty(descstring) /*&& iuri != null*/) {
-                    Toast.makeText(AddPost.this, "one", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(AddPost.this, "one", Toast.LENGTH_SHORT).show();
                     // final StorageReference filepath = productImagesRef.child(imageUri.getLastPathSegment()+productRandomKey+".jpg");
                     //final UploadTask uploadTask = filepath.putFile(imageUri);
 
@@ -101,8 +103,8 @@ public class AddPost extends AppCompatActivity {
                                     Map<String, String> data = new HashMap<>();
                                     data.put("title", titlestring);
                                     data.put("desc", descstring);
-                                    Toast.makeText(AddPost.this, downloadImageUrl, Toast.LENGTH_SHORT).show();
-                                    data.put("image", downloadImageUrl + "hi");
+                                   // Toast.makeText(AddPost.this, downloadImageUrl, Toast.LENGTH_SHORT).show();
+                                    data.put("image", downloadImageUrl);
 
                                     data.put("timestamp", String.valueOf(java.lang.System.currentTimeMillis()));
                                     data.put("userid", mUser.getUid());
@@ -114,8 +116,7 @@ public class AddPost extends AppCompatActivity {
                                     //createNewPost(imageUrl);
                                 }
                             });
-                            //downloadImageUrl = taskSnapshot.getMetadata().getReference().getDownloadUrl().toString();
-                            //downloadImageUrl = filepath.getDownloadUrl().toString(
+
                         }
 
                     });
@@ -151,6 +152,8 @@ public class AddPost extends AppCompatActivity {
         galleryIntent.setType("image/*");
         startActivityForResult(galleryIntent,1);
     }
+
+
 
  }
 
